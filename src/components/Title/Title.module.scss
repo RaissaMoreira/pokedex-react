@@ -1,0 +1,12 @@
+@use "../../styles/variables.scss" as v;
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: v.$fontPoke;
+  color: v.$yellow;
+  font-size: 27px;
+  text-shadow: v.$shadow-text;
+}

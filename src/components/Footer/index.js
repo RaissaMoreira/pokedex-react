@@ -1,0 +1,12 @@
+import { Link } from 'react-router-dom';
+import styles from './Footer.module.scss';
+
+export default function Footer(){
+  return(
+    <footer className={styles.footer}>
+      <p>Desenvolvido por 
+        <Link to='https://github.com/RaissaMoreira' target="_blank" className={styles.name}> Raissa Moreira</Link>
+      </p>
+    </footer>
+  )
+}

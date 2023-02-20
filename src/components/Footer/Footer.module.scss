@@ -1,0 +1,18 @@
+@use "../../styles/variables.scss" as v;
+
+.footer {
+  background-color: v.$red-light;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  transition: .4s ease;
+  color: v.$white;
+
+  &:hover {
+    color: v.$yellow;
+  }
+}

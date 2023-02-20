@@ -1,0 +1,7 @@
+.pokeGrid {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+}

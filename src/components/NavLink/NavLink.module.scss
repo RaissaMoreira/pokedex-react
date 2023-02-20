@@ -1,0 +1,9 @@
+@use "../../styles/variables.scss" as v;
+
+.link {
+  color: v.$white;
+
+  &:hover {
+    color: v.$hover-white;
+  }
+}
