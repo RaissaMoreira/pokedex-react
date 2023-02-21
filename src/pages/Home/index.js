@@ -3,10 +3,12 @@ import Card from "../../components/Card";
 import Spinner from "../../components/Spinner";
 import styles from "./Home.module.scss";
 import { useEffect, useState } from "react";
-import { getPokemons, getPokemonsData } from "../../api/api";
+import { getPokemons, getPokemonsData, searchPokemon } from "../../api/api";
+import SearchBar from "../../components/SearchBar";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
+  const [pokeNotFound, setPokeNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
 
   const fetchPokemons = async () => {
@@ -24,6 +26,23 @@ export default function Home() {
     }
   }
 
+  const handleSearch = async (poke) => {
+    if(!poke) {
+      return fetchPokemons();
+    }
+
+    setLoading(true);
+    setPokeNotFound(false);
+    const result = await searchPokemon(poke);
+
+    if(!result) {
+      setPokeNotFound(true);
+    } else {
+      setPokemons([result])
+    }
+    setLoading(false);
+  }
+
   useEffect(() => {
     fetchPokemons();
   }, [])
@@ -33,12 +52,19 @@ export default function Home() {
       <Title>
         <h1>Pokedex</h1>
       </Title>
+      <section className={styles.searchBar}>
+        <SearchBar handleSearch={handleSearch}/>
+      </section>
       <section className={styles.pokeGrid}>
-      {/* <Spinner/> */}
-        {loading ? <Spinner/> : 
-          pokemons && pokemons.map((pokemon, index) => (
-            <Card key={ index } pokemon={ pokemon }/>
-          ))
+        {
+          pokeNotFound ? 
+            <div>Pokemon not found... Try again!</div>
+           : 
+           loading ? 
+            <Spinner/> : 
+              pokemons && pokemons.map((pokemon, index) => (
+                <Card key={ index } pokemon={ pokemon }/>
+              ))
         }
       </section>
     </>

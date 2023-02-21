@@ -1,5 +1,9 @@
-.container section {
-  margin: 2rem 0;
+.container {
+  margin: 2rem auto;
   text-align: center;
-  min-height: 60vh;
+  min-height: 76vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
