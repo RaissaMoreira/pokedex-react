@@ -5,7 +5,7 @@ import styles from './Favorites.module.scss';
 
 export default function Favorites() {
   const { favorite } = useFavoriteContext();
-  // console.log(favorite)
+  console.log(favorite)
 
   // for (let item of favorite) {
   //   console.log(item.name)
@@ -25,8 +25,14 @@ export default function Favorites() {
         <h1>My Favorites</h1>
       </Title>
       <section className={styles.container}>
-        {favorite.map((item) => (
-          <Card item={item} key={item.id}/>
+        {favorite && favorite.map((fav, index) => (
+          <Card fav={fav} key={index}/>
+
+          // console.log("fav: ", fav)
+
+          // <div key={item.id}>
+          //   <img alt="oi" src={item.sprites?.front_default}/>
+          // </div>
         ))}
       </section>
     </>

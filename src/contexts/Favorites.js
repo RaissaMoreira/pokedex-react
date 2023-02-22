@@ -13,14 +13,19 @@ export default function FavoritesProvider({ children }) {
   );
 }
 
+
 export function useFavoriteContext() {
   const { favorite, setFavorite } = useContext(FavoritesContext);
 
   function addFavorite(newFavorite) {
 
-    const favRepeated = favorite.some(item => item.name === newFavorite.name)
+    const favRepeated = favorite.some(item => item.name === newFavorite.name);
+    console.log(favRepeated)
+    console.log('NEWFAVORITE', newFavorite) // objeto
 
     let newList = [...favorite];
+
+    console.log('NEWLIST', newList) // array
 
     if(!favRepeated) {
       newList.push(newFavorite);
@@ -32,6 +37,7 @@ export function useFavoriteContext() {
 
     setFavorite(newList)
 
+    console.log('FAVORITE', favorite)
 
 
    
