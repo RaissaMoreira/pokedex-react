@@ -1,0 +1,84 @@
+@use "../../styles/variables.scss" as v;
+
+p, h4 {
+  margin: 0;
+}
+
+.subTitle {
+  font-size: 24px;
+  font-family: v.$fontPoke;
+  color: v.$yellow;
+  text-shadow: v.$shadow-text;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem 1rem;
+  background-color: rgba(126, 126, 126, 0.321);
+  padding: 1rem;
+  border-radius: 8px;
+
+  h4 {
+    grid-area: 2 / 4 / 1 / 1;
+    margin-bottom: 1rem;
+  }
+}
+
+.descriptionStats {
+  display: flex;
+  width: fit-content;
+  gap: 0.5rem;
+  text-align: start;
+}
+
+.abilitiesContainer {
+  background-color: rgba(126, 126, 126, 0.321);
+  padding: 1rem;
+  border-radius: 8px;
+
+  .descriptionAbility {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.positionsContainer {
+  background-color: rgba(126, 126, 126, 0.321);
+  padding: 1rem;
+  border-radius: 8px;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.stat_hp {
+  color: #D33A48;
+}
+
+.stat_attack {
+  color: #FEA726;
+}
+
+.stat_defense {
+  color: #0191EB;
+}
+
+.stat_special-attack {
+  color: #8EB0C4;
+}
+
+.stat_special-defense {
+  color: #b288ff;
+}
+
+.stat_speed {
+  color: #388D3C;
+}

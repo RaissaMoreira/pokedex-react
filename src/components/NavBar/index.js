@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import logoPoke from "../../images/pokeball.png";
 import NavLink from "../NavLink";
+import Badge from '@mui/material/Badge';
+import { useFavoriteContext } from "../../contexts/Favorites";
 import styles from "./NavBar.module.scss";
 
 export default function NavBar() {
+  const {favorite} = useFavoriteContext()
+  const quantityFav = favorite.length;
+
   return (
     <header className={styles.navbar}>
       <div className={styles.container}>
@@ -13,7 +18,9 @@ export default function NavBar() {
         </Link>
         <nav className={styles.navContainer}>
           <NavLink url="./">Home</NavLink>
-          <NavLink url="./favorites">Favorites</NavLink>
+          <Badge badgeContent={quantityFav} color='secondary'>
+            <NavLink url="./favorites">Favorites</NavLink>
+          </Badge>
         </nav>
       </div>
     </header>

@@ -1,0 +1,21 @@
+.pokeGrid {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.warning {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .pokeGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 800px) {
+  .pokeGrid { grid-template-columns: repeat(3, 1fr); }
+}

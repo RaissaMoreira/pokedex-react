@@ -18,58 +18,15 @@ export function useFavoriteContext() {
   const { favorite, setFavorite } = useContext(FavoritesContext);
 
   function addFavorite(newFavorite) {
+    setFavorite([...favorite, newFavorite])
+  }
 
-    const favRepeated = favorite.some(item => item.name === newFavorite.name);
-    console.log(favRepeated)
-    console.log('NEWFAVORITE', newFavorite) // objeto
-
-    let newList = [...favorite];
-
-    console.log('NEWLIST', newList) // array
-
-    if(!favRepeated) {
-      newList.push(newFavorite);
-      // return setFavorite(newList);
-    } else {
-      // newList.slice(newList.indexOf(newFavorite), 1);
-      newList.splice(newFavorite, 1);
-    }
-
-    setFavorite(newList)
-
-    console.log('FAVORITE', favorite)
-
-
-   
-    // const favRepeated = favorite.some(item => item.id === newFavorite.id)
-
-    // let newList = [...favorite];
-
-    // if(!favRepeated) {
-    //   newList.push(newFavorite);
-    //     return setFavorite(newList);
-    // }
-
-    // newList.slice(newList.indexOf(newFavorite), 1);
-    // return setFavorite(favorite);
-
-
-
-    // const newList = [...favorite];
-    // const favoriteIndex = favorite.indexOf(newFavorite);
-
-
-    // if (favoriteIndex >= 0) {
-    //   newList.splice(favoriteIndex, 1);
-    // } else {
-    //   newList.push(newFavorite);
-    // }
-    // setFavorite(newList);
-
-    
+  function removeFavorite(removeFav) {
+    setFavorite(favorite.filter((poke) => poke.name !== removeFav.name))
   }
   return {
     favorite,
     addFavorite,
+    removeFavorite,
   };
 }

@@ -4,15 +4,13 @@ import { useFavoriteContext } from "../../contexts/Favorites";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
 
-function Card({ pokemon }) {
-  const { favorite, addFavorite } = useFavoriteContext();
-  // const isFavorite = favorite.find((item) => item.name === pokemon.name);
-
-  console.log("POKEMON: ", pokemon)
+function Card({pokemon}) {
+  const { favorite, addFavorite, removeFavorite } = useFavoriteContext();
+  const isFavorite = favorite.some((poke) => poke.name == pokemon.name);
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerImg}>
+      <div type={pokemon?.types[0]?.type?.name} className={styles.containerImg}>
         <img
           src={pokemon?.sprites?.front_default}
           width="120"
@@ -29,16 +27,15 @@ function Card({ pokemon }) {
         <div className={styles.buttons}>
           <div
             onClick={() => {
-              addFavorite(pokemon);
+              isFavorite ? removeFavorite(pokemon) : addFavorite(pokemon)
             }}
             className={styles.containerBtnFav}
           >
-            <FavoriteIcon className={styles.favorite} />
-            {/* {!isFavorite ? (
+            {!isFavorite ? (
               <FavoriteBorderIcon className={styles.favorite} />
             ) : (
               <FavoriteIcon className={styles.favorite} />
-            )} */}
+            )}
           </div>
           <Link to={`/${pokemon?.id}`} className={styles.btnDetails}>Details</Link>
         </div>

@@ -1,0 +1,26 @@
+@use "../../styles/variables.scss" as v;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.text {
+  display: flex;
+}
+
+.btn {
+  background-color: v.$red-light;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.icon {
+  color: v.$white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

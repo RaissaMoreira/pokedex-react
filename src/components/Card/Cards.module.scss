@@ -3,7 +3,6 @@
 .container {
   background-color: v.$bg-black-light;
   border-radius: 5px;
-  padding: 15px 15px 25px;
   min-width: 220px;
   margin: auto;
 
@@ -11,24 +10,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  padding: 160px 15px 25px;
 }
 
-/*
-
-grass
-fire
-water
-bug
-normal
-
-*/
-
 .containerImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
   background-color: v.$bg-card;
   border-radius: 8px;
   width: 100%;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  height: 150px;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
@@ -86,4 +86,76 @@ normal
 .favorite {
   cursor: pointer;
   color: v.$red;
+}
+
+div[type="grass"] {
+  background-color: v.$grass;
+}
+
+div[type="fire"] {
+  background-color: v.$fire;
+}
+
+div[type="water"] {
+  background-color: v.$water;
+}
+
+div[type="bug"] {
+  background-color: v.$bug;
+}
+
+div[type="normal"] {
+  background-color: v.$normal;
+}
+
+div[type="electric"] {
+  background-color: v.$eletric;
+}
+
+div[type="psychic"] {
+  background-color: v.$psychic;
+}
+
+div[type="ice"] {
+  background-color: v.$ice;
+}
+
+div[type="dragon"] {
+  background-color: v.$dragon;
+}
+
+div[type="dark"] {
+  background-color: v.$dark;
+}
+
+div[type="fairy"] {
+  background-color: v.$fairy;
+}
+
+div[type="steel"] {
+  background-color: v.$steel;
+}
+
+div[type="ghost"] {
+  background-color: v.$ghost;
+}
+
+div[type="rock"] {
+  background-color: v.$rock;
+}
+
+div[type="ground"] {
+  background-color: v.$ground;
+}
+
+div[type="poison"] {
+  background-color: v.$poison;
+}
+
+div[type="flying"] {
+  background-color: v.$flying;
+}
+
+div[type="fighting"] {
+  background-color: v.$fighting;
 }
