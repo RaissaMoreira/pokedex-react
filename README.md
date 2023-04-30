@@ -4,6 +4,8 @@
 * Pokedex with the following information for every Pokémon:
 > Image, name, type, weight, height, positions, abilities and base status;
 
+--> [SEE MORE!](https://pokedex-react-nu-nine.vercel.app/) <--
+
 ### :eye: Preview
 
 <img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeHome.png?raw=true" width="400px">
