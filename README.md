@@ -1,4 +1,4 @@
-# :boom: Pokedex :boom:
+# :boom: Pokedex React :boom:
 
 * A Responsive Pokedex made with React JS, Hooks, consuming the pokeapi and using localstorage.
 * Pokedex with the following information for every Pokémon:
