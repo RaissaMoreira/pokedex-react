@@ -6,11 +6,9 @@
 
 ### :eye: Preview
 
-<span>
-<img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeHome.png?raw=true" width="320px">
-<img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeFavorites.png?raw=true" width="340px">
-<img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeDetails.png?raw=true" width="340px">
-</span>
+<img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeHome.png?raw=true" width="400px">
+<img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeFavorites.png?raw=true" width="400px">
+<img src="https://github.com/RaissaMoreira/pokedex-react/blob/master/src/assets/images/pokeDetails.png?raw=true" width="400px">
 
 ### :hammer_and_wrench: Technologies
 * [React](https://react.dev/)
