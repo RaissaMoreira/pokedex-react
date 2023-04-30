@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Card({pokemon}) {
   const { favorite, addFavorite, removeFavorite } = useFavoriteContext();
-  const isFavorite = favorite.some((poke) => poke.name == pokemon.name);
+  const isFavorite = favorite.some((poke) => poke.name === pokemon.name);
 
   return (
     <div className={styles.container}>

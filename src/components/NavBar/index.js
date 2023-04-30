@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoPoke from "../../images/pokeball.png";
+import logoPoke from "../../assets/images/pokeball.png";
 import NavLink from "../NavLink";
 import Badge from '@mui/material/Badge';
 import { useFavoriteContext } from "../../contexts/Favorites";

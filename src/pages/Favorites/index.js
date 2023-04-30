@@ -1,6 +1,7 @@
 import { useFavoriteContext } from "../../contexts/Favorites";
 import Card from "../../components/Card";
 import Title from "../../components/Title";
+import BackToTop from "../../components/BackToTop";
 import styles from "./Favorites.module.scss";
 
 export default function Favorites() {
@@ -16,6 +17,7 @@ export default function Favorites() {
           {favorite?.map((pokemon, index) => (
             <Card key={index} pokemon={pokemon} />
           ))}
+          <BackToTop />
         </section>
       ) : (
         <p className={styles.warning}>You don't have favorites pokemons</p>

@@ -1,4 +1,4 @@
-import image from "../../images/charizard.png";
+import image from "../../assets/images/charizard.png";
 import styles from './Page404.module.scss';
 import { Link } from "react-router-dom";
 
